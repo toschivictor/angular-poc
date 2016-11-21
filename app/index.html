@@ -2,10 +2,19 @@
 <html ng-app="panel">
 <head>
 	<meta charset="utf-8">
-	<title>AngularJS POC</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>POC AngularJS</title>
 </head>
 <body>
-	<h1>Testando</h1>
-	<p>lorem ipsum</p>
+
+	<div class="row">
+		<section class="large-12 columns" ng-controller="ListController">
+			<h3>Lista de fotos</h3>
+			<p>lorem ipsum</p>
+
+			<box ng-repeat="shot in shots" id="{{shot.id}}" title="{{shot.title}}" image="{{shot.images.teaser}}"></box>
+		</section>
+	</div>
+
 </body>
 </html>

@@ -5,7 +5,7 @@ exports.setupCSS = (paths) => {
         module: {
             loaders: [
                 {
-                  test: /\.less$/,
+                  test: /(\.less$)|(\.css$)/,
                   loader: "style!css!less",
                   include: paths
                 }

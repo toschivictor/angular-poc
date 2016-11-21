@@ -45,7 +45,7 @@ switch(process.env.npm_lifecycle_event) {
 			},
 			parts.setupCSS(paths.app + '/css')
 		)
-    	break;
+    	break
 	default:
     	config = merge(
 			common,

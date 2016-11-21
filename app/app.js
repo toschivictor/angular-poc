@@ -1,6 +1,11 @@
-'use strict'
+;(function() {
+    'use strict'
 
-require('./css/style.less')
-const angular = require('angular')
+    const style   = require('./css/style.less')
+    const angular = require('angular')
 
-angular.module('panel', [])
+    angular.module('panel', ['componentes'])
+
+    require('./js/controllers/list-controller.js')
+    require('./js/components/box-component.js')
+})()
