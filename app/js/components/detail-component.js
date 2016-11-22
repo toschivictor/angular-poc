@@ -1,7 +1,7 @@
 ;(function() {
     'use strict'
 
-    angular.module('componentes', []).component('box', {
+    angular.module('componentes', []).component('detail', {
         bindings: {
             id: '@',
             title: '@',

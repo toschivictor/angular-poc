@@ -19,6 +19,7 @@
   "homepage": "https://github.com/toschivictor/angular-poc#readme",
   "devDependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "css-loader": "^0.26.0",
     "html-webpack-plugin": "^2.24.1",
     "less": "^2.7.1",
