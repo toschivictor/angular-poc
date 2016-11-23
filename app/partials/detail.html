@@ -1,0 +1,12 @@
+<div class="row">
+    <a href="/">Voltar</a>
+    
+    <section class="large-12 columns" ng-controller="DetailController">
+        <h3>Detalhe</h3>
+        <h4>{{shot.title}}</h3>
+
+        <div ng-bind-html="parseHtmlReturn()"></div>
+
+        <img src="{{image.normal}}">
+    </section>
+</div>

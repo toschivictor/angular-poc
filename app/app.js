@@ -1,9 +1,9 @@
 ;(function() {
     'use strict'
 
-    const style   = require('./css/style.less')
-    const angular = require('angular')
-    const angularRouter = require('angular-route')
+    const style   = require('./css/style.less');
+    const angular = require('angular');
+    const angularRouter = require('angular-route');
 
     angular.module('panel', ['componentes', 'ngRoute'])
         .config(function($routeProvider, $locationProvider) {
@@ -12,19 +12,19 @@
             $routeProvider
                 .when('/', {
                     templateUrl: './app/partials/home.html',
-                    controller: 'ListController'
+                    controller: 'ListController',
+                    controllerAs: 'vm'
                 })
-                .when('/detalhes/:id', {
+                .when('/detalhe/:id', {
                     templateUrl: './app/partials/detail.html',
                     controller: 'DetailController'
                 })
                 .otherwise({
                     redirectTo: '/'
-                })
-        })
+                });
+        });
 
-    require('./js/controllers/list-controller.js')
-    require('./js/controllers/detail-controller.js')
-    require('./js/components/box-component.js')
-    require('./js/components/box-component.js')
+    const home         = require('./js/controllers/list-controller.js');
+    const detail       = require('./js/controllers/detail-controller.js');
+    const boxComponent = require('./js/components/box-component.js');
 })()

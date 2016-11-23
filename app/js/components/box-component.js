@@ -9,4 +9,4 @@
         },
         templateUrl: './app/js/components/box.html'
     })
-})()
+})();
