@@ -1,19 +1,17 @@
 ;(function() {
     'use strict';
 
-    const auth = require('../auth/auth.js');
-
-    const getList = function($scope, $http) {
+    const getList = function($scope, GetListFactory) {
         $scope.shots = [];
 
-        $http.get('https://api.dribbble.com/v1/shots?list&access_token=' + auth.token)
-            .then(function(response) {
-                $scope.shots = response.data;
+        GetListFactory.data()
+            .success(function(response) {
+                $scope.shots = response;
             })
-            .catch(function(response) {
+            .error(function(response) {
                 console.error(response);
-            })
-    }
+            });
+    };
 
     angular.module('panel')
         .controller('ListController', getList);

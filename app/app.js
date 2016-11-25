@@ -1,5 +1,5 @@
 ;(function() {
-    'use strict'
+    'use strict';
 
     const style   = require('./css/style.less');
     const angular = require('angular');
@@ -12,8 +12,8 @@
             $routeProvider
                 .when('/', {
                     templateUrl: './app/partials/home.html',
-                    controller: 'ListController',
-                    controllerAs: 'vm'
+                    controller: 'ListController'/*,
+                    controllerAs: 'vm'*/
                 })
                 .when('/detalhe/:id', {
                     templateUrl: './app/partials/detail.html',
@@ -24,7 +24,9 @@
                 });
         });
 
-    const home         = require('./js/controllers/list-controller.js');
-    const detail       = require('./js/controllers/detail-controller.js');
-    const boxComponent = require('./js/components/box-component.js');
-})()
+    const home             = require('./js/controllers/list-controller.js');
+    const detail           = require('./js/controllers/detail-controller.js');
+    const getListFactory   = require('./js/models/get-list-factory.js');
+    const getDetailFactory = require('./js/models/get-detail-factory.js');
+    const boxComponent     = require('./js/components/box-component.js');
+})();
