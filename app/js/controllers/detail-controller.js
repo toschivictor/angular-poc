@@ -1,7 +1,7 @@
 ;(function() {
     'use strict';
 
-    function onSuccess(response) {
+    function onSuccess($scope, $sce, response) {
         $scope.shot        = response;
         $scope.description = response.description;
         $scope.image       = response.images;
@@ -19,7 +19,7 @@
 
         GetDetailFactory.data()
             .success(function(response) {
-                onSuccess(response);
+                onSuccess($scope, $sce, response);
             })
             .error(function(response) {
                 console.error(response);
@@ -28,4 +28,4 @@
 
     angular.module('panel')
         .controller('DetailController', getDetail);
-})()
+})();
