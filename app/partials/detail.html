@@ -1,12 +1,19 @@
 <div class="row">
-    <a href="/">Voltar</a>
-    
     <section class="large-12 columns" ng-controller="DetailController">
-        <h3>Detalhe</h3>
+        <h1>Detalhe</h1>
         <h4>{{shot.title}}</h3>
 
-        <div ng-bind-html="parseHtmlReturn()"></div>
+        <div class="media-object callout primary">
+            <div class="media-object-section">
+                <div class="thumbnail">
+                    <img src="{{image.normal}}">
+                </div>
+            </div>
+            <div class="media-object-section main-section">
+                <div ng-bind-html="parseHtmlReturn()"></div>
+            </div>
+        </div>
 
-        <img src="{{image.normal}}">
+        <a href="/" class="button">Voltar</a>
     </section>
 </div>

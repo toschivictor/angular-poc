@@ -12,12 +12,15 @@
             $routeProvider
                 .when('/', {
                     templateUrl: './app/partials/home.html',
-                    controller: 'ListController'/*,
-                    controllerAs: 'vm'*/
+                    controller: 'ListController'
                 })
                 .when('/detalhe/:id', {
                     templateUrl: './app/partials/detail.html',
                     controller: 'DetailController'
+                })
+                .when('/cadastro', {
+                    templateUrl: './app/partials/cadastro.html',
+                    controller: 'CadastroController'
                 })
                 .otherwise({
                     redirectTo: '/'

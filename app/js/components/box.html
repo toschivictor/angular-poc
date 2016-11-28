@@ -1,5 +1,17 @@
-<div class="large-4 medium-4 columns callout">
-    <a href="/detalhe/{{$ctrl.id}}" title="{{$ctrl.title}}">
-        <img src="{{$ctrl.image}}" alt="{{$ctrl.title}}">
-    </a>
+<div class="large-6 medium-6 columns">
+
+    <div class="media-object">
+        <div class="media-object-section">
+            <div class="thumbnail">
+                <a href="/detalhe/{{$ctrl.id}}">
+                    <img src="{{$ctrl.image}}" alt="{{$ctrl.title}}">
+                </a>
+            </div>
+        </div>
+        <div class="media-object-section main-section">
+            <h5>{{$ctrl.title}}</h5>
+            <a href="/detalhe/{{$ctrl.id}}" class="button" title="{{$ctrl.title}}">Ver detalhes</a>
+        </div>
+    </div>
+
 </div>

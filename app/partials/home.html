@@ -1,8 +1,18 @@
-<div class="row">
     <section class="large-12 columns" ng-controller="ListController">
-        <h3>Lista de fotos</h3>
-        <p>lorem ipsum</p>
+        <div class="row">
+            <div class="large-9 columns">
+                <h1>Exibição de Imagens</h1>
+            </div>
 
-        <box ng-repeat="shot in shots" id="{{shot.id}}" title="{{shot.title}}" image="{{shot.images.teaser}}"></box>
+            <div class="large-3 columns">
+                <a class="success button">Login</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>Lista de fotos:</p>
+
+            <box ng-repeat="shot in shots" id="{{shot.id}}" title="{{shot.title}}" image="{{shot.images.teaser}}"></box>
+        </div>
     </section>
 </div>

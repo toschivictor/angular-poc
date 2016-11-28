@@ -1,7 +1,7 @@
 ;(function() {
     'use strict';
 
-    const getList = function($scope, GetListFactory) {
+    const getList = function($scope, $sce, GetListFactory) {
         $scope.shots = [];
 
         GetListFactory.data()
